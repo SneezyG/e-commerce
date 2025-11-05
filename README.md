@@ -65,8 +65,6 @@ docker-compose up -d
 
 ## Testing
 
-### Unit Tests
-
 Run unit tests for both services.
 
 #### Order Service

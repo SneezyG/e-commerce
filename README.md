@@ -2,6 +2,8 @@
 
 This project is an **event-driven, microservices-based eCommerce system**.
 
+---
+
 ## Services
 
 * **Order Service**: Accepts orders and publishes `order.created` events.
@@ -10,6 +12,8 @@ This project is an **event-driven, microservices-based eCommerce system**.
 * **PostgreSQL**: Database for orders & inventory (Docker container).
 
 Architecture is modular, clean, and production-ready.
+
+---
 
 ## Architecture Overview
 
@@ -28,6 +32,8 @@ Architecture is modular, clean, and production-ready.
 * Docker (for RabbitMQ & PostgreSQL)
 * Gradle
 
+---
+
 ## Setup Instructions
 
 ### Start Dependencies
@@ -35,6 +41,9 @@ Architecture is modular, clean, and production-ready.
 ```
 docker-compose up -d
 ```
+
+---
+
 
 ## API Endpoints
 
@@ -56,12 +65,19 @@ docker-compose up -d
 }
 ```
 
+---
+
+
 ## Event Topics
 
 | Event Name           | Publisher         | Consumers         | Description      |
 | -------------------- | ----------------- | ----------------- | ---------------- |
 | `order.created`      | Order Service     | Inventory Service | New order placed |
 | `inventory.reserved` | Inventory Service | Order Service     | Stock reserved   |
+
+
+---
+
 
 ## Testing
 
@@ -94,6 +110,10 @@ cd order-service
 ./test-api.sh
 ```
 
+
+---
+
+
 ## Development Rules
 
 1. **Backend Architecture**: Clean, modular layers (controller/service/repository/event).
@@ -101,6 +121,10 @@ cd order-service
 3. **Database**: SQL modeling for orders & inventory, consistent with events.
 4. **Collaboration**: API contracts documented; README with setup, payloads, tests.
 5. **Quality Assurance**: Proper error handling, unit/integration tests, logging, config externalized.
+
+
+---
+
 
 ## Notes
 
